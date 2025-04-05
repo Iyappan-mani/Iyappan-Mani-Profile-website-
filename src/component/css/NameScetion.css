@@ -1,0 +1,45 @@
+.name {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 8rem;
+  font-size: 45px;
+}
+
+.name1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 28px;
+  color: #E8B10A;
+}
+
+.hireme {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 1px 30px;
+  border-radius: 7px;
+  line-height: 1.2;
+  font-size: 15px;
+  height: 40px;
+}
+
+.Resume {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: rgb(5, 5, 5);
+  padding: 1px 30px;
+  
+  border-radius: 7px;
+  line-height: 1.2;
+  height: 40px;
+  margin-left: 20px;
+  font-size: 17px;
+}
