@@ -4,14 +4,14 @@ export const personalInfo = {
   lastName: "M",
   title: "Software Developer",
   roles: [
-    "React Native Developer",
-    "Mobile App Developer",
-    "Android & iOS Deployment Specialist",
-    "React.js Web Developer",
-    "Firebase Integration Developer"
+    "React Native & Mobile Architecture",
+    "AI-Powered Mobile Solutions",
+    "Android & iOS Store Deployment",
+    "Firebase & Cloud Integration",
+    "High-Performance React.js"
   ],
-  tagline: "Building cross-platform mobile & web applications with React Native and React.js, deployed on Play Store & App Store.",
-  aboutShort: "Software Developer with 4+ years of experience in building and deploying cross-platform mobile applications for Android & iOS using React Native.",
+  tagline: "Software Developer with 4+ years of experience building, securing, and shipping production mobile applications across Android & iOS, deployed on Google Play Console and Apple Developer Console.",
+  aboutShort: "Software Developer with 4+ years of experience building, securing, and shipping production mobile applications across Android & iOS. Expertise spanning React Native, Firebase, REST APIs, and UI/UX development — delivering end-to-end store releases on Google Play Console and Apple Developer Console.",
   email: "iyappan.99mani@gmail.com",
   displayEmail: "iyappan.99mani@gmail.com",
   phone: "+91 9655755416",
@@ -433,3 +433,128 @@ export const educationData = [
 ];
 
 export const testimonialsData = [];
+
+export const aiFeaturesData = [
+  {
+    id: "voice-ai",
+    title: "Audio to Create Job",
+    tag: "Voice AI",
+    icon: "FaMicrophone",
+    color: "#00f2fe",
+    description: "Just speak, and AI turns your voice into a structured job and task automatically.",
+    benefit: "Hands-free mobile productivity"
+  },
+  {
+    id: "text-ocr",
+    title: "Text & Document Recognition",
+    tag: "Document AI",
+    icon: "FaFileAlt",
+    color: "#10b981",
+    description: "Extract key information and data fields from text and physical documents using AI vision.",
+    benefit: "Instant digitisation from camera"
+  },
+  {
+    id: "auto-invoice",
+    title: "Automate Invoice Creation",
+    tag: "Smart Billing",
+    icon: "FaFileInvoiceDollar",
+    color: "#8a2be2",
+    description: "Let AI handle the details and generate verified invoices and billing entries automatically.",
+    benefit: "Zero manual data entry errors"
+  },
+  {
+    id: "ai-dev",
+    title: "AI-Assisted Development",
+    tag: "Engineering",
+    icon: "FaCode",
+    color: "#f59e0b",
+    description: "Write, debug, and optimize React Native code faster using cutting-edge AI developer tools.",
+    benefit: "Accelerated development speed"
+  },
+  {
+    id: "workflow-automation",
+    title: "Intelligent Workflows",
+    tag: "Automation",
+    icon: "FaCogs",
+    color: "#ec4899",
+    description: "Transform repetitive manual operations into reactive, intelligent mobile workflows.",
+    benefit: "Seamless background processing"
+  },
+  {
+    id: "efficiency",
+    title: "Better Efficiency & Impact",
+    tag: "Productivity",
+    icon: "FaChartLine",
+    color: "#4facfe",
+    description: "Focus on high-value features while AI handles routine manual work in the background.",
+    benefit: "Superior user experience"
+  }
+];
+
+export const linkedInPostsData = [
+  {
+    id: 1,
+    author: "Iyappan Mani",
+    role: "Software Developer at Authorselvi Software Technology",
+    date: "Featured Insight • AI & Development",
+    content: `4+ years into my software development journey, I’ve learned one thing clearly — the right tools can completely change how we work.
+
+Recently, I started integrating AI agents into my daily workflow… and honestly, it’s been a game changer.
+
+From writing repetitive code to debugging and exploring new approaches, AI is helping me move faster and think better.
+
+But here’s the reality:
+AI is not here to replace developers. It’s here to empower developers who know how to use it right.
+
+What AI does well:
+• Handles repetitive and time-consuming tasks
+• Speeds up development and experimentation
+• Acts as a strong coding assistant
+
+What it doesn’t replace:
+• Real-world problem solving
+• System design thinking
+• Experience-driven decisions
+
+At the end of the day, AI is just a tool. The value still comes from the developer using it.
+The gap is no longer between “good” and “bad” developers… It’s between those who adapt and those who don’t.
+
+Learning how to work with AI is becoming a core skill — not an option.`,
+    tags: ["#AI", "#SoftwareEngineering", "#ReactNative", "#Productivity", "#DeveloperJourney", "#AIAgents"],
+    metrics: { likes: 98, comments: 34 },
+    link: "https://www.linkedin.com/in/iyappan-mani-50030321a",
+    featured: true
+  },
+  {
+    id: 2,
+    author: "Iyappan Mani",
+    role: "Software Developer at Authorselvi Software Technology",
+    date: "Deployment Milestone",
+    content: `Deploying production applications to Google Play Store and Apple App Store requires end-to-end discipline:
+
+• Configuring secure release keystores & Gradle in Android Studio
+• Generating signed AAB bundles & Play Console track rollouts
+• Setting up Apple Developer distribution certificates & provisioning profiles in Xcode
+• Managing App Store Connect metadata, screenshots & compliance review
+
+Ensuring 100% store compliance for seamless cross-platform releases! 🛠️📲`,
+    tags: ["#AppStore", "#GooglePlay", "#AndroidStudio", "#Xcode", "#AppDeployment", "#ReactNative"],
+    metrics: { likes: 67, comments: 19 },
+    link: "https://www.linkedin.com/in/iyappan-mani-50030321a"
+  },
+  {
+    id: 3,
+    author: "Iyappan Mani",
+    role: "Software Developer at Authorselvi Software Technology",
+    date: "Engineering & Architecture",
+    content: `Building and scaling production mobile apps across industries:
+• Yacht Logic Pro App & Yacht Logic Crew App (Maritime Operations)
+• Prescription Doctor App & Pacific Medihub App (Healthcare & Telemedicine)
+• Beauty Booking & Personal Locker applications
+
+Leveraging React Native with JavaScript, REST APIs, and Firebase Firestore/FCM to deliver reliable, 60 FPS mobile experiences with intuitive UI/UX design. 🚢🩺💡`,
+    tags: ["#SoftwareEngineer", "#MobileApps", "#RESTAPIs", "#Firebase", "#ReactNative", "#UIUX"],
+    metrics: { likes: 78, comments: 23 },
+    link: "https://www.linkedin.com/in/iyappan-mani-50030321a"
+  }
+];

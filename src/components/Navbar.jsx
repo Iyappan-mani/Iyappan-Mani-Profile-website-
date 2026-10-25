@@ -20,6 +20,7 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
 
   const navLinks = [
     { label: 'About', href: '#about' },
+    { label: 'AI Solutions', href: '#ai-solutions' },
     { label: 'Expertise', href: '#services' },
     { label: 'Experience', href: '#experience' },
     { label: 'Skills', href: '#skills' },
@@ -39,7 +40,7 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
       }
 
       // Scroll Spy logic
-      const sections = ['hero', 'about', 'services', 'experience', 'skills', 'projects', 'contact'];
+      const sections = ['hero', 'about', 'ai-solutions', 'services', 'experience', 'skills', 'projects', 'contact'];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el) {
@@ -166,7 +167,7 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                     boxShadow: '0 0 10px #10b981',
                     display: 'inline-block'
                   }}
-                  title="Available for hire"
+                  title="Available for new opportunities"
                 />
               </span>
               <span
@@ -190,7 +191,7 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '6px'
+              gap: '4px'
             }}
             className="d-none d-lg-flex"
           >
@@ -203,14 +204,16 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                   onClick={(e) => handleNavClick(e, link.href)}
                   style={{
                     textDecoration: 'none',
-                    fontSize: '0.92rem',
+                    fontSize: '0.88rem',
                     fontWeight: 600,
-                    padding: '8px 16px',
+                    padding: '7px 13px',
                     borderRadius: 'var(--radius-full)',
                     color: isActive ? 'var(--accent-cyan)' : 'var(--text-secondary)',
                     backgroundColor: isActive ? 'rgba(0, 242, 254, 0.09)' : 'transparent',
                     border: isActive ? '1px solid rgba(0, 242, 254, 0.25)' : '1px solid transparent',
-                    transition: 'all 0.25s ease'
+                    transition: 'all 0.25s ease',
+                    whiteSpace: 'nowrap',
+                    lineHeight: 1.2
                   }}
                   className="interactive-hover"
                 >

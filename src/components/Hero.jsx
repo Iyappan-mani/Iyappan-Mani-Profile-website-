@@ -45,21 +45,26 @@ const Hero = ({ onOpenResume }) => {
               <div
                 className="glass-pill interactive-hover"
                 style={{
-                  boxShadow: '0 4px 16px rgba(0, 242, 254, 0.15)',
-                  backdropFilter: 'blur(10px)'
+                  boxShadow: '0 4px 16px rgba(0, 242, 254, 0.12)',
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-color)',
+                  zIndex: 2
                 }}
               >
                 <span
                   style={{
-                    width: '10px',
-                    height: '10px',
+                    width: '9px',
+                    height: '9px',
                     borderRadius: '50%',
                     backgroundColor: '#10b981',
-                    boxShadow: '0 0 12px #10b981'
+                    boxShadow: '0 0 10px #10b981',
+                    flexShrink: 0
                   }}
                   className="animate-pulse-glow"
                 />
-                <span>Software Developer at Authorselvi Software Technology</span>
+                <span style={{ fontWeight: 600 }}>Software Developer at Authorselvi Software Technology</span>
               </div>
             </div>
 
@@ -125,15 +130,15 @@ const Hero = ({ onOpenResume }) => {
                 color: 'var(--text-secondary)',
                 fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
                 lineHeight: 1.75,
-                maxWidth: '620px',
+                maxWidth: '640px',
                 margin: '0 auto 28px auto'
               }}
               className="ms-lg-0"
             >
-              Building cross-platform mobile applications for Android & iOS with{' '}
-              <strong>React Native</strong> and interactive web applications with{' '}
-              <strong>React.js</strong>. Specialized in <strong>Firebase integration</strong> and end-to-end{' '}
-              <strong>Play Store & App Store</strong> deployment.
+              Software Developer with <strong>4+ years of experience</strong> building, securing, and shipping production mobile applications across{' '}
+              <strong>Android & iOS</strong>. Expertise spanning <strong>React Native</strong>, <strong>Firebase</strong>,{' '}
+              <strong>REST APIs</strong>, and <strong>UI/UX development</strong> — delivering end-to-end store releases on{' '}
+              <strong>Google Play Console</strong> and <strong>Apple Developer Console</strong>.
             </p>
 
             {/* Action Buttons Suite */}
@@ -316,19 +321,7 @@ const Hero = ({ onOpenResume }) => {
                     width: '92%',
                     height: '95%',
                     objectFit: 'contain',
-                    filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.5))'
-                  }}
-                />
-
-                {/* Bottom Gradient overlay */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '35%',
-                    background: 'linear-gradient(to top, var(--bg-primary) 0%, transparent 100%)'
+                    filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))'
                   }}
                 />
               </div>
@@ -380,14 +373,14 @@ const Hero = ({ onOpenResume }) => {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '30px',
-                  left: '-25px',
+                  bottom: '16px',
+                  left: '-12px',
                   background: 'var(--bg-glass-heavy)',
                   backdropFilter: 'blur(16px)',
                   border: '1px solid rgba(16, 185, 129, 0.4)',
-                  padding: '12px 20px',
+                  padding: '10px 18px',
                   borderRadius: 'var(--radius-lg)',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.4)',
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '12px',

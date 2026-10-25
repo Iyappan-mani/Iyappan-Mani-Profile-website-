@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import AiInnovations from './components/AiInnovations';
 import Services from './components/Services';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
+import LinkedInPosts from './components/LinkedInPosts';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -35,7 +37,7 @@ function App() {
 
   return (
     <div className="App" style={{ position: 'relative', minHeight: '100vh' }}>
-      {/* Interactive Custom Follower Cursor */}
+      {/* Interactive Custom Follower Cursor Animation */}
       <CustomCursor />
 
       {/* Dynamic 60FPS Interactive Particle Canvas */}
@@ -52,11 +54,13 @@ function App() {
       <main style={{ position: 'relative', zIndex: 1 }}>
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
         <About />
+        <AiInnovations />
         <Services />
         <Experience />
         <Skills />
         <Projects />
         <Education />
+        <LinkedInPosts />
         <Testimonials />
         <Contact />
       </main>
