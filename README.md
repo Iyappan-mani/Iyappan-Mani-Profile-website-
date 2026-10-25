@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# 🚀 Iyappan Mani — World-Class Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An ultra-modern, interactive, high-performance portfolio website built with **React 19**, **Bootstrap 5**, and high-fidelity CSS glassmorphism. Designed to showcase senior-level expertise in **React Native (iOS & Android)**, **React 19 / Next.js web platforms**, and **Google Play & Apple App Store deployment**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features & Visual Innovations
 
-### `npm start`
+- 🌌 **Interactive 60FPS Particle Canvas:** Fluid starfield / constellation system responding to mouse cursor proximity.
+- 🎯 **Magnetic Custom Follower Cursor:** Dynamic cursor follower that expands over interactive cards, buttons, and badges.
+- 🌓 **Dynamic Theme Switching:** Seamlessly toggle between **Obsidian Cyberpunk (Dark)** and **Porcelain Luxury (Light)** with persistent `localStorage` memory.
+- 📱 **Floating Glassmorphic Navbar:** Backdrop-filtered navigation with real-time reading scroll progress bar, scroll spy, and mobile drawer.
+- 💎 **Holographic Hero Section:** 3D avatar glow card, dynamic typewriter effect, live availability status, and global metrics counter ribbon.
+- 🏛️ **Bento-Grid About Architecture:** Highlighting cross-platform engineering, Google Play / Apple App Store provisioning, keystores, and clean code principles.
+- ⚙️ **Full-Spectrum Services Suite:** Detailed breakdown of mobile app development, web engineering, store launch operations, and performance profiling.
+- 📊 **Categorized Skills Arsenal:** Filter by *Mobile*, *Web*, *Cloud*, and *DevOps* with animated proficiency meters and authentic brand SVGs.
+- ⏳ **Chronological Career Milestones:** Interactive laser-connected vertical timeline with role achievements and tech stack chips.
+- 📂 **Rich Case Studies Showcase:** Filterable project cards with an in-depth **Case Study Modal** detailing architecture, metrics, features, and direct store/source links.
+- 📜 **Interactive Resume / CV Modal:** Printable and downloadable designer resume preview with one-click print-to-PDF formatting.
+- 💬 **High-Converting Contact Hub:** Instant email copy with toast notification, direct WhatsApp chat integration, and project inquiry form.
+- ⚡ **Global Digital Clock:** Real-time Indian Standard Time (IST) clock and quick back-to-top floating progress ring.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Arsenal
 
-### `npm test`
+- **Frontend Core:** React 19, React DOM 19
+- **Styling & Layout:** Modern CSS3, CSS Custom Properties, Glassmorphism, Bootstrap 5.3
+- **Icons & Typography:** React Icons (`react-icons/fa`, `react-icons/si`), Plus Jakarta Sans, Outfit, JetBrains Mono
+- **Animations:** HTML5 Canvas, CSS Keyframes, Typewriter Effect
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 💻 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the development server locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-### `npm run eject`
+To create an optimized production build:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 👨‍💻 Author
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Iyappan Mani**  
+Senior React & React Native Engineer  
+Specialist in iOS & Android Apps & Store Releases
