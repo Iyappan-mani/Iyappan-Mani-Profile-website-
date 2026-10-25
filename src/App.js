@@ -20,15 +20,15 @@ import './App.css';
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('iyappan_portfolio_theme');
-    return savedTheme ? savedTheme : 'dark';
+    const savedTheme = localStorage.getItem('iyappan_portfolio_theme_v2');
+    return savedTheme ? savedTheme : 'light';
   });
 
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('iyappan_portfolio_theme', theme);
+    localStorage.setItem('iyappan_portfolio_theme_v2', theme);
   }, [theme]);
 
   const toggleTheme = () => {

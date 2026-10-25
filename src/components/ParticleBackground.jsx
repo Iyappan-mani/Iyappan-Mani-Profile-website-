@@ -40,24 +40,26 @@ const ParticleBackground = ({ theme = 'dark' }) => {
     window.addEventListener('mouseleave', handleMouseLeave);
 
     // Particle count based on screen width
-    const particleCount = Math.min(Math.floor((width * height) / 14000), 75);
+    const particleCount = Math.min(Math.floor((width * height) / 12000), 85);
     const particles = [];
 
     const isDark = theme === 'dark';
     const primaryColor = isDark ? 'rgba(0, 242, 254,' : 'rgba(2, 132, 199,';
-    const secondaryColor = isDark ? 'rgba(112, 0, 255,' : 'rgba(147, 51, 234,';
+    const secondaryColor = isDark ? 'rgba(112, 0, 255,' : 'rgba(124, 58, 237,';
+    const accentColor = isDark ? 'rgba(16, 185, 129,' : 'rgba(13, 148, 136,';
 
     class Particle {
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.radius = isDark ? Math.random() * 2 + 1 : Math.random() * 1.5 + 0.8;
+        this.radius = isDark ? Math.random() * 2 + 1.2 : Math.random() * 2.2 + 1.2;
         this.baseX = this.x;
         this.baseY = this.y;
-        this.vx = (Math.random() - 0.5) * 0.8;
-        this.vy = (Math.random() - 0.5) * 0.8;
-        this.color = Math.random() > 0.4 ? primaryColor : secondaryColor;
-        this.alpha = isDark ? Math.random() * 0.5 + 0.2 : Math.random() * 0.22 + 0.08;
+        this.vx = (Math.random() - 0.5) * 0.85;
+        this.vy = (Math.random() - 0.5) * 0.85;
+        const colorRand = Math.random();
+        this.color = colorRand > 0.55 ? primaryColor : colorRand > 0.25 ? secondaryColor : accentColor;
+        this.alpha = isDark ? Math.random() * 0.5 + 0.3 : Math.random() * 0.45 + 0.35;
       }
 
       draw() {
@@ -97,7 +99,7 @@ const ParticleBackground = ({ theme = 'dark' }) => {
     }
 
     const connectParticles = () => {
-      const maxDistance = 120;
+      const maxDistance = 130;
       for (let a = 0; a < particles.length; a++) {
         for (let b = a + 1; b < particles.length; b++) {
           const dx = particles[a].x - particles[b].x;
@@ -105,10 +107,10 @@ const ParticleBackground = ({ theme = 'dark' }) => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * (isDark ? 0.2 : 0.08);
+            const lineOpacity = (1 - distance / maxDistance) * (isDark ? 0.25 : 0.22);
             ctx.beginPath();
-            ctx.strokeStyle = `${primaryColor} ${opacity})`;
-            ctx.lineWidth = 0.8;
+            ctx.strokeStyle = `${primaryColor} ${lineOpacity})`;
+            ctx.lineWidth = isDark ? 0.8 : 1.1;
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(particles[b].x, particles[b].y);
             ctx.stroke();
@@ -150,7 +152,7 @@ const ParticleBackground = ({ theme = 'dark' }) => {
         height: '100%',
         zIndex: 0,
         pointerEvents: 'none',
-        opacity: theme === 'dark' ? 0.75 : 0.25
+        opacity: theme === 'dark' ? 0.75 : 0.85
       }}
     />
   );
