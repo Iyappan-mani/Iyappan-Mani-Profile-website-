@@ -19,17 +19,7 @@ const Hero = ({ onOpenResume }) => {
   return (
     <section
       id="hero"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        paddingTop: '130px',
-        paddingBottom: '60px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        overflow: 'hidden'
-      }}
+      className="hero-section"
     >
       {/* Ambient background glows */}
       <div className="ambient-glow-orb orb-cyan" style={{ top: '-10%', left: '-5%' }} />
@@ -43,20 +33,23 @@ const Hero = ({ onOpenResume }) => {
             {/* Live Availability Status Pill */}
             <div className="d-inline-flex align-items-center mb-3">
               <div
-                className="glass-pill interactive-hover"
+                className="glass-pill interactive-hover hero-availability-pill"
                 style={{
                   boxShadow: '0 4px 16px rgba(0, 242, 254, 0.12)',
                   backdropFilter: 'blur(16px)',
                   WebkitBackdropFilter: 'blur(16px)',
                   background: 'var(--bg-card)',
                   border: '1px solid var(--border-color)',
-                  zIndex: 2
+                  zIndex: 2,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px'
                 }}
               >
                 <span
                   style={{
-                    width: '9px',
-                    height: '9px',
+                    width: '8px',
+                    height: '8px',
                     borderRadius: '50%',
                     backgroundColor: '#10b981',
                     boxShadow: '0 0 10px #10b981',
@@ -64,7 +57,9 @@ const Hero = ({ onOpenResume }) => {
                   }}
                   className="animate-pulse-glow"
                 />
-                <span style={{ fontWeight: 600 }}>Software Developer at Authorselvi Software Technology</span>
+                <span className="hero-availability-text" style={{ fontWeight: 600 }}>
+                  Software Developer at <strong style={{ color: 'var(--accent-cyan)' }}>Authorselvi Software Technology</strong>
+                </span>
               </div>
             </div>
 
@@ -84,6 +79,7 @@ const Hero = ({ onOpenResume }) => {
             </h5>
 
             <h1
+              className="hero-title"
               style={{
                 fontSize: 'clamp(2.5rem, 5.5vw, 4.4rem)',
                 fontWeight: 800,
@@ -97,21 +93,23 @@ const Hero = ({ onOpenResume }) => {
 
             {/* Dynamic Typewriter Heading */}
             <div
+              className="hero-typewriter-container justify-content-lg-start"
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.25rem, 2.8vw, 1.95rem)',
+                fontSize: 'clamp(1.15rem, 3.2vw, 1.95rem)',
                 fontWeight: 700,
                 color: 'var(--text-primary)',
-                minHeight: '60px',
+                minHeight: '48px',
                 display: 'flex',
+                flexWrap: 'wrap',
                 alignItems: 'center',
                 justifyContent: 'center',
+                gap: '6px 8px',
                 marginBottom: '16px'
               }}
-              className="justify-content-lg-start"
             >
-              <span style={{ marginRight: '10px', color: 'var(--text-muted)' }}>Specialist in</span>
-              <span style={{ color: 'var(--accent-cyan)' }}>
+              <span style={{ color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>Specialist in</span>
+              <span style={{ color: 'var(--accent-cyan)', whiteSpace: 'nowrap' }}>
                 <Typewriter
                   options={{
                     strings: personalInfo.roles,
@@ -126,14 +124,14 @@ const Hero = ({ onOpenResume }) => {
 
             {/* Short Bio Paragraph */}
             <p
+              className="hero-bio ms-lg-0"
               style={{
                 color: 'var(--text-secondary)',
-                fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
+                fontSize: 'clamp(0.95rem, 1.2vw, 1.15rem)',
                 lineHeight: 1.75,
                 maxWidth: '640px',
                 margin: '0 auto 28px auto'
               }}
-              className="ms-lg-0"
             >
               Software Developer with <strong>4+ years of experience</strong> building, securing, and shipping production mobile applications across{' '}
               <strong>Android & iOS</strong>. Expertise spanning <strong>React Native</strong>, <strong>Firebase</strong>,{' '}
@@ -143,6 +141,7 @@ const Hero = ({ onOpenResume }) => {
 
             {/* Action Buttons Suite */}
             <div
+              className="hero-actions-group justify-content-lg-start"
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -150,7 +149,6 @@ const Hero = ({ onOpenResume }) => {
                 justifyContent: 'center',
                 marginBottom: '32px'
               }}
-              className="justify-content-lg-start"
             >
               <a
                 href="#projects"
@@ -328,6 +326,7 @@ const Hero = ({ onOpenResume }) => {
 
               {/* Floating Orbit Badge 1: React Native */}
               <div
+                className="hero-orbit-badge-1 animate-pulse-glow"
                 style={{
                   position: 'absolute',
                   top: '-15px',
@@ -343,7 +342,6 @@ const Hero = ({ onOpenResume }) => {
                   gap: '10px',
                   zIndex: 2
                 }}
-                className="animate-pulse-glow"
               >
                 <div
                   style={{
@@ -354,16 +352,17 @@ const Hero = ({ onOpenResume }) => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#61dafb'
+                    color: '#61dafb',
+                    flexShrink: 0
                   }}
                 >
                   <SiReact size={22} />
                 </div>
                 <div>
-                  <span style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                  <span style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>
                     React Native
                   </span>
-                  <span style={{ display: 'block', fontSize: '0.72rem', color: 'var(--accent-cyan)' }}>
+                  <span style={{ display: 'block', fontSize: '0.72rem', color: 'var(--accent-cyan)', whiteSpace: 'nowrap' }}>
                     iOS & Android
                   </span>
                 </div>
@@ -371,6 +370,7 @@ const Hero = ({ onOpenResume }) => {
 
               {/* Floating Orbit Badge 2: Store Releases */}
               <div
+                className="hero-orbit-badge-2"
                 style={{
                   position: 'absolute',
                   bottom: '16px',
@@ -387,7 +387,7 @@ const Hero = ({ onOpenResume }) => {
                   zIndex: 2
                 }}
               >
-                <div style={{ display: 'flex', gap: '6px' }}>
+                <div style={{ display: 'flex', gap: '6px', flexShrink: 0 }}>
                   <div
                     style={{
                       width: '32px',
@@ -418,10 +418,10 @@ const Hero = ({ onOpenResume }) => {
                   </div>
                 </div>
                 <div>
-                  <span style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                  <span style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>
                     Store Deployment
                   </span>
-                  <span style={{ fontSize: '0.72rem', color: '#10b981', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <span style={{ fontSize: '0.72rem', color: '#10b981', display: 'flex', alignItems: 'center', gap: '4px', whiteSpace: 'nowrap' }}>
                     <FaCheckCircle size={10} /> Signed Production Builds
                   </span>
                 </div>
@@ -432,6 +432,7 @@ const Hero = ({ onOpenResume }) => {
 
         {/* Global Stats Ribbon */}
         <div
+          className="hero-stats-ribbon"
           style={{
             marginTop: '80px',
             padding: '24px 20px',
@@ -442,47 +443,28 @@ const Hero = ({ onOpenResume }) => {
             boxShadow: 'var(--glow-card)'
           }}
         >
-          <div className="row text-center gy-4">
-            {personalInfo.stats.map((stat, idx) => (
-              <div
-                key={stat.label}
-                className="col-6 col-md-3"
-                style={{
-                  borderRight: idx < personalInfo.stats.length - 1 ? '1px solid var(--border-color)' : 'none'
-                }}
-              >
+          <div className="row text-center g-0">
+            {personalInfo.stats.map((stat) => {
+              const isShort = stat.value.length <= 4;
+              return (
                 <div
-                  style={{
-                    fontSize: 'clamp(1.8rem, 3.2vw, 2.6rem)',
-                    fontWeight: 800,
-                    fontFamily: 'var(--font-display)',
-                    letterSpacing: '-1px'
-                  }}
-                  className="gradient-text"
+                  key={stat.label}
+                  className="col-6 col-md-3 stat-col"
                 >
-                  {stat.value}
+                  <div
+                    className={`gradient-text stat-value ${isShort ? 'is-numeric' : 'is-text'}`}
+                  >
+                    {stat.value}
+                  </div>
+                  <div className="stat-label">
+                    {stat.label}
+                  </div>
+                  <div className="stat-description">
+                    {stat.description}
+                  </div>
                 </div>
-                <div
-                  style={{
-                    fontSize: '0.92rem',
-                    fontWeight: 700,
-                    color: 'var(--text-primary)',
-                    marginTop: '2px'
-                  }}
-                >
-                  {stat.label}
-                </div>
-                <div
-                  style={{
-                    fontSize: '0.78rem',
-                    color: 'var(--text-muted)',
-                    marginTop: '2px'
-                  }}
-                >
-                  {stat.description}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

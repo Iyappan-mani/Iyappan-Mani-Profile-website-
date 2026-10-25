@@ -32,6 +32,7 @@ const BackToTop = () => {
   return (
     <div
       onClick={scrollToTop}
+      className="back-to-top-btn interactive-hover"
       style={{
         position: 'fixed',
         bottom: '30px',
@@ -50,7 +51,6 @@ const BackToTop = () => {
         zIndex: 9990,
         transition: 'all 0.3s ease'
       }}
-      className="interactive-hover"
       title="Back to Top"
     >
       <svg

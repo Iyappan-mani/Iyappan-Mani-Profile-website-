@@ -87,35 +87,8 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
       />
 
       {/* Floating Glass Navigation Header */}
-      <header
-        style={{
-          position: 'fixed',
-          top: scrolled ? '12px' : '20px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: 'calc(100% - 32px)',
-          maxWidth: '1240px',
-          zIndex: 10000,
-          transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
-        }}
-      >
-        <nav
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: scrolled ? '10px 24px' : '14px 28px',
-            background: scrolled ? 'var(--bg-glass-heavy)' : 'var(--bg-glass)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            borderRadius: 'var(--radius-full)',
-            border: '1px solid var(--border-color)',
-            boxShadow: scrolled
-              ? '0 16px 36px -10px rgba(0, 0, 0, 0.4), var(--glow-cyan)'
-              : '0 8px 24px -6px rgba(0, 0, 0, 0.25)',
-            transition: 'all 0.35s ease'
-          }}
-        >
+      <header className={`navbar-floating-header ${scrolled ? 'is-scrolled' : ''}`}>
+        <nav className="navbar-glass-container">
           {/* Logo / Brand Name */}
           <a
             href="#hero"
@@ -128,6 +101,7 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
             }}
           >
             <div
+              className="nav-brand-logo-badge"
               style={{
                 width: '40px',
                 height: '40px',
@@ -139,13 +113,15 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                 color: '#070a13',
                 fontWeight: 800,
                 fontSize: '1.2rem',
-                boxShadow: '0 4px 14px rgba(0, 242, 254, 0.4)'
+                boxShadow: '0 4px 14px rgba(0, 242, 254, 0.4)',
+                flexShrink: 0
               }}
             >
               IM
             </div>
             <div>
               <span
+                className="nav-brand-name"
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontWeight: 800,
@@ -154,23 +130,27 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                   color: 'var(--text-primary)',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '6px'
+                  gap: '6px',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 Iyappan Mani
                 <span
+                  className="nav-brand-status-dot"
                   style={{
                     width: '8px',
                     height: '8px',
                     borderRadius: '50%',
                     backgroundColor: '#10b981',
                     boxShadow: '0 0 10px #10b981',
-                    display: 'inline-block'
+                    display: 'inline-block',
+                    flexShrink: 0
                   }}
                   title="Available for new opportunities"
                 />
               </span>
               <span
+                className="nav-brand-tagline"
                 style={{
                   display: 'block',
                   fontSize: '0.72rem',
@@ -178,7 +158,8 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                   textTransform: 'uppercase',
                   letterSpacing: '1px',
                   fontWeight: 600,
-                  marginTop: '-3px'
+                  marginTop: '-3px',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 React & React Native
@@ -224,11 +205,12 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
           </div>
 
           {/* Action Controls & Theme Toggle */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div className="nav-action-group" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
               aria-label="Toggle Theme"
+              className="nav-theme-toggle-btn interactive-hover"
               style={{
                 width: '40px',
                 height: '40px',
@@ -243,7 +225,6 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                 cursor: 'pointer',
                 transition: 'all 0.3s ease'
               }}
-              className="interactive-hover"
               title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
             >
               {theme === 'dark' ? <FaSun /> : <FaMoon />}
@@ -274,9 +255,10 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
+              className="nav-mobile-menu-btn d-lg-none interactive-hover"
               style={{
-                width: '42px',
-                height: '42px',
+                width: '40px',
+                height: '40px',
                 borderRadius: '12px',
                 background: 'var(--bg-card)',
                 border: '1px solid var(--border-color)',
@@ -284,10 +266,9 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '1.2rem',
+                fontSize: '1.15rem',
                 cursor: 'pointer'
               }}
-              className="d-lg-none interactive-hover"
             >
               {mobileMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -303,7 +284,9 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
           left: 0,
           width: '100%',
           height: '100vh',
-          background: theme === 'dark' ? 'rgba(7, 10, 19, 0.92)' : 'rgba(248, 250, 255, 0.96)',
+          maxHeight: '100vh',
+          overflowY: 'auto',
+          background: theme === 'dark' ? 'rgba(7, 10, 19, 0.94)' : 'rgba(248, 250, 255, 0.97)',
           backdropFilter: 'blur(25px)',
           WebkitBackdropFilter: 'blur(25px)',
           zIndex: 9999,
@@ -311,7 +294,7 @@ const Navbar = ({ theme, toggleTheme, onOpenResume }) => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '24px',
+          padding: '40px 24px',
           opacity: mobileMenuOpen ? 1 : 0,
           pointerEvents: mobileMenuOpen ? 'auto' : 'none',
           transform: mobileMenuOpen ? 'scale(1)' : 'scale(0.95)',
